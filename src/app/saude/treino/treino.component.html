@@ -1,0 +1,21 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div>Dia<br><input type="datetime-local" formControlName="data"></div>
+    <div>Tipo<br>
+      <select formControlName="tipo">
+        <option value="CORRIDA">CORRIDA</option>
+      </select>
+    </div>
+    <div>Distância<br><input type="text" formControlName="distancia"></div>
+    <div>Tempo<br> <input type="text" formControlName="tempo"></div>
+    <button type="submit">Salvar</button>
+    <button (click)="deleta()">Deletar</button>
+    <button (click)="atualiza()">Atualizar</button>
+</form>
+<br>
+<div style="width: 1050px">
+  <app-tabela
+    #tabela
+    [colunas]="colunas"
+    [dados]="dados">
+  </app-tabela>
+</div>

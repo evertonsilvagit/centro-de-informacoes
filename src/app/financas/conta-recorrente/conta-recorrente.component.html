@@ -1,0 +1,18 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div>Descricao<br> <input type="text" formControlName="descricao"></div>
+    <div>Dia<br> <input type="text" formControlName="dia"></div>
+    <div>Valor<br> <input type="text" formControlName="valor"></div>
+    <button type="submit">Salvar</button>
+    <button type="button" (click)="deleta()">Deletar</button>
+    <button type="button" (click)="atualiza()">Atualizar</button>
+</form>
+
+<br>
+
+<div style="width: 1050px">
+  <app-tabela
+    #tabela
+    [colunas]="colunas"
+    [dados]="dados">
+  </app-tabela>
+</div>
