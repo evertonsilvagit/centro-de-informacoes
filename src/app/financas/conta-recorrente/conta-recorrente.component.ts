@@ -19,7 +19,7 @@ export class ContaRecorrenteComponent implements OnInit {
   dados: any[] = [];
   colunas: any[] = ['descricao', 'dia', 'valor', 'id'];
 
-  URL = "http://localhost:8081/financas/contas-recorrentes";
+  URL = "http://localhost:8080/financas/contas-recorrentes";
 
   // @ts-ignore
   @ViewChild('tabela') tabela: TabelaComponent;
